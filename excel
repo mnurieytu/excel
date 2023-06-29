@@ -1,0 +1,10 @@
+import pandas as pd
+
+# Загрузка данных из Excel-файла
+data = pd.read_excel('data.xlsx')
+
+# Фильтрация данных
+filtered_data = data[data['Value'] > 10]
+
+# Сохранение отфильтрованных данных в новом Excel-файле
+filtered_data.to_excel('filtered_data.xlsx', index=False)
